@@ -173,16 +173,19 @@ nav{
     padding: 15px 15px 15px 20px;
     text-decoration: none;
 }
-.main{ 
+.main {
     background: #f6f7f4;
     width: 100%;
     height: auto;
     display: flex;
-    padding-top: 1% ;
+    padding-top: 1%;
+    justify-content: center; /* Centra el contenido horizontalmente */
 }
+
 .slider-frame {
-    width: 100%;
-    margin-left: 25px; /* Se eliminaron las unidades de medida 'px' del margen superior e inferior */
+    width: 80%; /* Ajusta el ancho del slider según lo necesites */
+    max-width: 800px; /* Establece un ancho máximo para el slider */
+    margin: 0 auto; /* Centra el slider horizontalmente */
     overflow: hidden;
     padding: 0;
 }
@@ -190,7 +193,7 @@ nav{
 .slider-frame ul {
     display: flex;
     padding: 0;
-    width: 400%; /* Se cambió el ancho a 400% para adaptarse a 4 imágenes */
+    width: 400%;
     animation: slide 16s infinite alternate ease-in-out;
 }
 
@@ -200,8 +203,9 @@ nav{
 }
 
 .slider-frame img {
-    width: 100%;
-    align-self: center;
+    width: 100%; /* Las imágenes ocuparán el 100% del ancho del li */
+    height: auto; /* Mantiene la proporción de aspecto original */
+    object-fit: cover; /* Ajusta la imagen para cubrir el área del contenedor */
 }
 
 @keyframes slide {
@@ -214,6 +218,7 @@ nav{
     75% { margin-left: -300%; }
     95% { margin-left: -300%; }
 }
+
 
 .footer{
     display: flex;   
