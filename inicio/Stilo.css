@@ -35,8 +35,7 @@ header {
 
 .logo {
     height: auto;
-    
-
+    max-height: 100px; /* Ajusta según sea necesario */
 }
 
 .menu {
@@ -182,9 +181,8 @@ nav{
 }
 .slider-frame {
     width: 100%;
-    margin-left: 25px; /* Se eliminaron las unidades de medida 'px' del margen superior e inferior */
-    overflow: hidden;
-    padding: 0;
+    max-width: 1000px; /* Ajusta según sea necesario */
+    margin: 0 auto;
 }
 
 .slider-frame ul {
@@ -201,7 +199,7 @@ nav{
 
 .slider-frame img {
     width: 100%;
-    align-self: center;
+    height: auto;
 }
 
 @keyframes slide {
