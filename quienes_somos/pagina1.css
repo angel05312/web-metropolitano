@@ -1,19 +1,18 @@
 * {
     list-style: none;
     box-sizing: border-box;
-    margin:0;
+    margin: 0;
     padding: 0;
 }
 
 body {
-    height: 145vh;
-
+    min-height: 100vh;
     position: relative;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
-    
+    margin-top: 100px; /* Añade un margen superior para que no se superponga con el header */
 }
 
 header {
@@ -24,19 +23,15 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left:5%;
-    padding-right: 5%;
+    padding: 0 5%;
     height: 100px;
     background-color: #380D06;
     z-index: 1000;
-    
 }
-
 
 .logo {
     height: auto;
-    
-
+    max-height: 80px; /* Controla la altura máxima del logo */
 }
 
 .menu {
@@ -44,38 +39,30 @@ header {
     justify-content: center;
     align-items: center;
 }
-.item>a
-{
+
+.item>a {
     text-decoration: none;
     color: white;
 }
-.item>a:hover
-{
-    text-decoration: none;
+
+.item>a:hover {
     color: #ff2258;
 }
+
 .item {
     margin: 0 15px;
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
     color: #f2f2f2;
-    margin-right: 1em; 
-    
-}
-
-.item:hover {
-    color: #ff2258;
 }
 
 #menu {
     display: none;
-    
 }
 
 .menu-icono {
     width: 25px;
-   
 }
 
 label {
@@ -83,12 +70,8 @@ label {
     display: none;
     margin-left: 5em;
 }
-@media (max-width: 991px) {
-    .menu {
-        padding: 30px;
-        margin: 0;
-    }
 
+@media (max-width: 991px) {
     label {
         display: initial;
     }
@@ -100,281 +83,161 @@ label {
         right: 0;
         background-color: #233bb4;
         display: none;
+        flex-direction: column;
     }
 
     .item {
-        margin: 0 0 20px 0;
+        margin: 20px 0;
         width: 100%;
+        text-align: center;
     }
 
-  
-
     #menu:checked ~ .menu {
-        display: initial;
-    }    
-
+        display: flex;
+    }
 }
 
-nav{ 
+nav {
     max-width: 100%;
-    margin: auto;
     background-color: #29030e;
     font-size: 20px;
-    margin-top: 100px;
+    margin: 0 auto;
 }
+
 .menu-horizontal {
     list-style: none;
     display: flex;
     justify-content: space-around;
-    
 }
-.menu-horizontal > li > a{
+
+.menu-horizontal > li > a {
     display: block;
     padding: 15px 20px;
     color: #e7e9f3;
     text-decoration: none;
-   
-    
 }
-.menu-horizontal > li:hover{
-    background-color:red ;
+
+.menu-horizontal > li:hover {
+    background-color: red;
 }
-.menu-vertical{
+
+.menu-vertical {
     position: absolute;
     display: none;
     list-style: none;
     width: 200px;
-    background-color: rgba(0,0, 0, .5);
 }
-.menu-horizontal li:hover .menu-vertical{
+
+.menu-horizontal li:hover .menu-vertical {
     display: block;
     background-color: #29030e;
 }
-.menu-vertical  > li > a:hover {
-    background-color: yellow; /* Cambia el color de fondo al pasar el ratón */
-    color: #000000; /* Cambia el color de texto al pasar el ratón */
-}
-.menu-vertical li a{
-    display: block;
-    color: white;
-    padding: 15px 15px 15px 20px;
-    text-decoration: none;
-}
-/*asta aca pte*/
-#principal{
-    padding: 1%;
-    border-width: 8px; /* Ancho del borde */
-    border-style:solid; /* Estilo del borde (en este caso, un borde sólido) */
-    border-color: #f7f4f4; /* Color del borde */
 
+.menu-vertical > li > a:hover {
+    background-color: yellow;
+    color: #000000;
 }
- 
+
+#principal {
+    padding: 1%;
+    border: 8px solid #f7f4f4;
+}
+
 .contiene {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
-    width: 100%;
-    height: auto;
     padding: 1%;
-
 }
 
 .text {
     padding: 5%;
-    width: 50%;
+    flex: 1;
     background-color: #580202;
-    color: #fff;  
-}
-
-.text h2 {
-    margin-bottom: 0px;
-    
+    color: #fff;
 }
 
 .images {
-    display: left;
-    width: 50%;
-   
+    flex: 1;
+    padding: 5%;
+    text-align: center;
 }
 
 .images img {
-    width: 100%; /* Ajusta el tamaño de las imágenes según tus necesidades */         
-    height: 100%;
-    padding-left: 5%;
-}
-#misiones {
-    display: flex;
-    padding: 1%;
-    text-align: center;
-    
-}
-#misiones h2 {
-    padding-bottom: 5%;
-    
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Añade un poco de redondez a las esquinas */
 }
 
-.mision ul,.vision ul {
-    list-style-type: none; /* Quita los puntos de la lista */
-    padding: 0; /* Elimina el relleno predeterminado de la lista */
-    margin: 0; /* Elimina el margen predeterminado de la lista */
+#misiones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1%;
 }
 
 .mision, .vision {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
     background-color: #580202;
-    padding: 10px;
-    margin-right: 10px;
-    width: 50%;
     color: #f4f4f4;
-   
+    text-align: center;
 }
+
 .personal {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 1%;
-    max-width: 100%;
+    gap: 20px; /* Añade un espacio entre los elementos */
 }
-.directorio,.docentes {
-    text-align:center;   
-    background-color: #580202;
-    padding: 5px;
-    margin: 0 auto; /* Centrar horizontalmente */   
-    width: 100%; /* Ancho del bloque */
-    color: #f8f2f2;
-}
-.director {
-    width: calc(50% - 20px);
-    margin-bottom: 20px;
+
+.director, .secredise, .docente {
+    flex: 1 1 calc(25% - 20px);
     background-color: #f9f9f9;
     border-radius: 8px;
-    overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    
-}
-.secredise{
-    width: calc(33.33% - 20px);
     margin-bottom: 20px;
-    background-color: #f7f2f2;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    
 }
-.docente{
-    width: calc(25% - 20px);
-    margin-bottom: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    
-}
-.director img,.docente img ,.secredise img{
+
+.director img, .docente img, .secredise img {
     width: 100%;
     height: auto;
     border-bottom: 1px solid #ddd;
 }
 
-.director h2,.docente h2 {
-    font-size: 1.5rem;
-    padding: 10px;
-    color: #0a0a0a;
-}
-
-.footer{
-    display: flex;   
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     background: linear-gradient(20deg, #380D06, #6D120F, #A5241B, #E23D34);
-    width: 100%;
-    height: auto;
+    padding: 20px;
 }
-.footer,#izquierda{
-    font-size: 1.2vw;  
-}
-#izquierda a {
-    display: flex;
-    align-items: center;
-    text-decoration: none; /* opcional: quita el subrayado de los enlaces */
-    margin-bottom: 2px; /* opcional: añade un espacio entre cada enlace */
-    padding-left: 30%;
-  }
-  
-  #izquierda a i {
-    margin-right: 10px; /* opcional: añade espacio entre el icono y el texto */
-  }
-  
-  #izquierda p {
-    margin: 0; /* opcional: quita el espacio alrededor del párrafo */
-  }
-  #derecha a {
-    display: flex;
-    align-items: center;
-    text-decoration: none; /* opcional: quita el subrayado de los enlaces */
-    margin-bottom: 2px; /* opcional: añade un espacio entre cada enlace */
-    padding-left: 30%;
-  }
-  
-  #derecha a i {
-    margin-right: 10px; /* opcional: añade espacio entre el icono y el texto */
-  }
-  
-  #derecha p {
-    margin: 0; /* opcional: quita el espacio alrededor del párrafo */
-  }
 
-  .footer p, #izquierda strong {
-    font-size: 1.2vw;   
+#izquierda, #derecha {
+    flex: 1 1 45%;
+    text-align: center;
+    color: #f7f4f4;
+    font-size: 1.2vw;
 }
-.footer p, #derechas strong {
-    font-size: 1.2vw;   
-}
-.button {
+
+#izquierda a, #derecha a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
-    color: #F7BF10;
+    margin-bottom: 2px;
 }
 
-#izquierda{
-    
-    width: 50%;
-    height: auto;
-    text-align: center;
-    padding-bottom: 2em;
-}
-#derecha{   
-    width: 70%;
-    height: auto;
-    text-align: center;
-    padding-bottom: 2em;
+#izquierda a i, #derecha a i {
+    margin-right: 10px;
 }
 
-.facebook{
-    color: rgb(226, 230, 2);
-   font-size: 30px;
-    
-}
-
-.whatsapp{
-    color: rgb(226, 230, 2);
-    font-size: 30px;
-    
-}
-.instagram{
-    color: rgb(226, 230, 2);
-    font-size: 30px;
-}
-.tiktok{
-    color: rgb(226, 230, 2);
-    font-size: 30px;
-}
-.ubicacion{
-    color: rgb(226, 230, 2);
-    font-size: 30px;
-}
 .copi {
-    color: #000000; /* Cambia el color del texto */
-    font-size: 20px; /* Cambia el tamaño del texto */
-    text-align: center; /* Centra el texto */
+    color: #000000;
+    font-size: 20px;
+    text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-  }
+}
