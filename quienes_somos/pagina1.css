@@ -1,7 +1,7 @@
 * {
     list-style: none;
     box-sizing: border-box;
-    margin:0;
+    margin: 0;
     padding: 0;
     text-decoration: none;
 }
@@ -11,7 +11,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #FF9A1A;
+    background-color: #f3f3f3; /* Manteniendo el color claro */
     position: sticky;
     top: 0;
     z-index: 100;
@@ -41,12 +41,12 @@ header ul.menu {
 header ul.menu li a {
     font-size: 20px;
     font-weight: bold;
-    color: white;
+    color: #333; /* Manteniendo el color oscuro */
     transition: color 0.3s;
 }
 
 header ul.menu li a:hover {
-    color: #000;
+    color: #FF9A1A; /* Manteniendo el color naranja */
 }
 
 @media screen and (max-width: 768px) {
@@ -75,7 +75,7 @@ header ul.menu li a:hover {
 nav ul.menu-horizontal {
     display: flex;
     justify-content: center;
-    background-color: #007FB3;
+    background-color: #FF9A1A; /* Manteniendo el color naranja */
     padding: 10px 0;
     margin: 0;
 }
@@ -96,7 +96,7 @@ nav ul.menu-vertical {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #007FB3;
+    background-color: #FF9A1A; /* Manteniendo el color naranja */
     flex-direction: column;
     z-index: 100;
 }
@@ -141,7 +141,7 @@ nav ul.menu-horizontal li:hover > ul.menu-vertical {
 #misiones {
     display: flex;
     justify-content: space-around;
-    background-color: #FF9A1A;
+    background-color: #333; /* Manteniendo el color oscuro */
     color: white;
     padding: 20px;
     text-align: center;
@@ -170,7 +170,7 @@ nav ul.menu-horizontal li:hover > ul.menu-vertical {
 footer {
     display: flex;
     justify-content: space-between;
-    background-color: #007FB3;
+    background-color: #333; /* Manteniendo el color oscuro */
     color: white;
     padding: 20px;
     flex-wrap: wrap;
@@ -189,12 +189,12 @@ footer a {
 }
 
 footer a:hover {
-    color: #000;
+    color: #FF9A1A; /* Manteniendo el color naranja */
 }
 
 .copi {
     text-align: center;
-    background-color: #333;
+    background-color: #FF9A1A; /* Manteniendo el color naranja */
     color: white;
     padding: 10px;
 }
