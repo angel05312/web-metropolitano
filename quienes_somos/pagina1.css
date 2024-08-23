@@ -21,41 +21,18 @@ header {
     top: 0;
     left: 0;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     z-index: 1000;
 }
 
+/* Estilo del logo */
 header .logo {
     max-width: 120px; /* Reduce el tamaño del logo */
     height: auto;
     display: block; /* Asegura que el logo se mantenga en la parte superior izquierda */
 }
 
-/* Estilos para el menú */
-.menu {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.menu-item {
-    margin: 0 15px;
-}
-
-.menu-item a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    font-weight: 600;
-    padding: 0.5rem;
-}
-
-.menu-item a:hover {
-    color: #ff2258; /* Color de hover */
-}
-
+/* Estilos para el icono del menú */
 .menu-icono {
     width: 30px;
     cursor: pointer;
@@ -63,6 +40,40 @@ header .logo {
 }
 
 /* Menú desplegable en dispositivos móviles */
+#menu {
+    display: none; /* Ocultamos el checkbox por defecto */
+}
+
+#menu:checked ~ .menu {
+    display: block; /* Muestra el menú cuando se activa el checkbox */
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #003366; /* Fondo azul para el menú desplegable */
+}
+
+.menu .item {
+    margin: 0 15px;
+}
+
+.menu .item a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0.5rem;
+    display: block;
+}
+
+.menu .item a:hover {
+    color: #ff2258; /* Color de hover */
+}
+
+/* Estilos para el menú desplegable */
 .menu-vertical {
     list-style: none;
     background-color: #003366; /* Fondo azul para el menú desplegable */
@@ -71,6 +82,8 @@ header .logo {
     right: 0;
     display: none; /* Ocultamos el menú desplegable por defecto */
     width: 200px; /* Ajusta el ancho del menú desplegable */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para el menú desplegable */
 }
 
 .menu-vertical li {
@@ -94,9 +107,9 @@ header .logo {
 }
 
 /* Estilos para el contenedor principal */
-.main {
-    text-align: center;
+#principal {
     margin-top: 100px; /* Espacio debajo del header fijo */
+    text-align: center;
 }
 
 /* Estilos para el slider */
@@ -120,28 +133,27 @@ header .logo {
 }
 
 .slider-frame ul li img {
-    width: 80%; /* Ajusta el tamaño de las imágenes en el slider */
+    width: 100%; /* Ajusta el tamaño de las imágenes en el slider */
     height: auto;
     object-fit: cover;
-    margin: 0 auto; /* Centra la imagen dentro del contenedor */
 }
 
 /* Animación para el slider */
 @keyframes slide {
-    0% {margin-left: 0;}
-    20% {margin-left: 0;}
-    25% {margin-left: -100%;}
-    45% {margin-left: -100%;}
-    50% {margin-left: -200%;}
-    70% {margin-left: -200%;}
-    75% {margin-left: -300%;}
-    95% {margin-left: -300%;}
-    100% {margin-left: 0;}
+    0% { margin-left: 0; }
+    20% { margin-left: 0; }
+    25% { margin-left: -100%; }
+    45% { margin-left: -100%; }
+    50% { margin-left: -200%; }
+    70% { margin-left: -200%; }
+    75% { margin-left: -300%; }
+    95% { margin-left: -300%; }
+    100% { margin-left: 0; }
 }
 
 /* Estilos para las imágenes en otras secciones */
 img {
-    max-width: 80%; /* Ajusta el tamaño máximo de las imágenes */
+    max-width: 100%; /* Ajusta el tamaño máximo de las imágenes */
     height: auto;
     display: block;
     margin: 0 auto; /* Centra las imágenes dentro del contenedor */
