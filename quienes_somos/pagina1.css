@@ -107,8 +107,8 @@ header .logo {
 
 /* Estilos para el slider */
 .slider-frame {
-    width: 80%;
-    max-width: 800px;
+    width: 100%;
+    max-width: 100%;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -131,6 +131,7 @@ header .logo {
     object-fit: cover;
 }
 
+/* Animación para el slider */
 @keyframes slide {
     0% {margin-left: 0;}
     20% {margin-left: 0;}
@@ -141,6 +142,12 @@ header .logo {
     75% {margin-left: -300%;}
     95% {margin-left: -300%;}
     100% {margin-left: 0;}
+}
+
+/* Estilos para las imágenes en otras secciones */
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Estilos para el footer */
