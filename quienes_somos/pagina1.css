@@ -27,7 +27,7 @@ header {
 }
 
 header .logo {
-    max-width: 150px; /* Asegura que el logo no se distorsione */
+    max-width: 120px; /* Reduce el tamaño del logo */
     height: auto;
 }
 
@@ -126,9 +126,10 @@ header .logo {
 }
 
 .slider-frame ul li img {
-    width: 100%;
+    width: 80%; /* Ajusta el tamaño de las imágenes en el slider */
     height: auto;
     object-fit: cover;
+    margin: 0 auto; /* Centra la imagen dentro del contenedor */
 }
 
 /* Animación para el slider */
@@ -146,8 +147,10 @@ header .logo {
 
 /* Estilos para las imágenes en otras secciones */
 img {
-    max-width: 100%;
+    max-width: 80%; /* Ajusta el tamaño máximo de las imágenes */
     height: auto;
+    display: block;
+    margin: 0 auto; /* Centra las imágenes dentro del contenedor */
 }
 
 /* Estilos para el footer */
