@@ -7,34 +7,33 @@
 
 /* Estilos para el body */
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
-    background: #f6f7f4;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #f6f7f4; /* Color de fondo similar al de index.html */
 }
 
 /* Estilos para el header */
-#header {
-    width: 100%;
+header {
+    background-color: #380D06; /* Color de fondo del header */
+    padding: 1rem;
     position: fixed;
+    width: 100%;
     top: 0;
     left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 5%;
-    height: 100px;
-    background-color: #380D06;
     z-index: 1000;
 }
 
-#header .logo {
+header .logo {
+    max-width: 150px; /* Asegura que el logo no se distorsione */
     height: auto;
 }
 
+/* Estilos para el menú */
 .menu {
+    list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,176 +41,68 @@ body {
 
 .menu-item {
     margin: 0 15px;
-    font-size: 18px;
-    font-weight: 600;
-    cursor: pointer;
 }
 
 .menu-item a {
     text-decoration: none;
     color: white;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0.5rem;
 }
 
 .menu-item a:hover {
-    color: #ff2258;
-}
-
-#menu {
-    display: none;
+    color: #ff2258; /* Color de hover */
 }
 
 .menu-icono {
-    width: 25px;
-}
-
-label {
+    width: 30px;
     cursor: pointer;
-    display: none;
+    display: none; /* Ocultamos el icono por defecto */
 }
 
-@media (max-width: 991px) {
-    .menu {
-        padding: 30px;
-        background-color: #233bb4;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        display: none;
-    }
+#menu {
+    display: none; /* Menú oculto por defecto */
+}
 
-    label {
-        display: block;
-    }
+/* Estilos para el menú desplegable */
+.menu-vertical {
+    list-style: none;
+    background-color: #29030e; /* Color de fondo del menú desplegable */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: none; /* Ocultamos el menú desplegable por defecto */
+}
 
-    .menu-item {
-        margin: 0 0 20px;
-        width: 100%;
-    }
+.menu-vertical li {
+    margin: 0;
+}
 
-    #menu:checked ~ .menu {
-        display: block;
-    }
+.menu-vertical a {
+    padding: 1rem;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+.menu-vertical a:hover {
+    background-color: #575757; /* Color de hover para el menú vertical */
+}
+
+/* Mostrar menú en dispositivos móviles */
+#menu:checked ~ .menu {
+    display: block;
+}
+
+#menu:checked ~ .menu-vertical {
+    display: block;
 }
 
 /* Estilos para el contenedor principal */
-#principal {
+.main {
     text-align: center;
-    margin: 1rem 0;
-}
-
-#principal img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Estilos para el contenido */
-.contiene {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 1rem;
-}
-
-.text {
-    flex: 1;
-    padding: 1rem;
-}
-
-.text h2 {
-    margin-bottom: 0.5rem;
-}
-
-.images {
-    flex: 1;
-    padding: 1rem;
-}
-
-.images img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Estilos para la misión y visión */
-#mision, #vision {
-    margin: 1rem;
-    padding: 1rem;
-}
-
-.mision, .vision {
-    margin-bottom: 1rem;
-}
-
-/* Estilos para el directorio */
-.directorio h2 {
-    text-align: center;
-    margin: 1rem 0;
-}
-
-/* Estilos para el personal */
-.personal {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 1rem;
-}
-
-.personal .director, .personal .secredise, .personal .docente {
-    margin: 0.5rem;
-    text-align: center;
-}
-
-.personal img {
-    max-width: 150px;
-    height: auto;
-    border-radius: 50%;
-}
-
-/* Estilos para el footer */
-.footer {
-    display: flex;
-    flex-wrap: wrap;
-    background: linear-gradient(20deg, #380D06, #6D120F, #A5241B, #E23D34);
-    width: 100%;
-    padding: 20px;
-}
-
-#izquierda, #derecha {
-    width: 50%;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-#izquierda a, #derecha a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 10px;
-}
-
-#izquierda i, #derecha i {
-    font-size: 25px;
-    color: white;
-    padding-right: 10px;
-}
-
-@media screen and (max-width: 700px) {
-    #izquierda, #derecha {
-        width: 100%;
-    }
-}
-
-/* Estilos para la sección de copyright */
-.copi {
-    background-color: #000000;
-    color: white;
-    width: 100%;
-    text-align: center;
-    padding: 10px;
-}
-
-.copi p {
-    margin: 0;
+    margin-top: 100px; /* Espacio debajo del header fijo */
 }
 
 /* Estilos para el slider */
@@ -250,4 +141,40 @@ label {
     75% {margin-left: -300%;}
     95% {margin-left: -300%;}
     100% {margin-left: 0;}
+}
+
+/* Estilos para el footer */
+.footer {
+    background: linear-gradient(20deg, #380D06, #6D120F, #A5241B, #E23D34);
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: white;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer i {
+    margin-right: 10px;
+}
+
+/* Estilos para la sección de copyright */
+.copi {
+    text-align: center;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    width: 100%;
 }
